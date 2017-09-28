@@ -2,6 +2,13 @@
 #include <qwt_plot.h>
 #include <qapplication.h>
 
+
+#define PLOT_TITLE "Hill Climbing Algorithm"
+#define FUNC_STRING "f(x) = sin(x/10)"
+
+#define VALUE_COUNT 1000
+
+
 int main(int argc, char **argv)
 {
     QApplication a(argc, argv);
