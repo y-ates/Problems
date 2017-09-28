@@ -5,10 +5,10 @@
 int main(int argc, char **argv)
 {
     QApplication a(argc, argv);
-    double x[101];
-    double y[101];
+    double x[VALUE_COUNT];
+    double y[VALUE_COUNT];
 
-    for (int i = 0; i < 101; ++i) {
+    for (int i = 0; i < VALUE_COUNT; ++i) {
         x[i] =  i / 10.0;
         y[i] = sin(x[i]);
     }
