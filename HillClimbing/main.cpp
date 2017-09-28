@@ -9,6 +9,20 @@
 
 #define VALUE_COUNT 1000
 
+/**
+ * Useful Links
+ * http://www.richelbilderbeek.nl/CppLinkErrorUndefinedReferenceToQwtPlot.htm
+ * https://de.wikibooks.org/wiki/Qt_f%C3%BCr_C%2B%2B-Anf%C3%A4nger:_Qwt_nutzen
+ * http://www.aboutlinux.info/2006/01/creating-and-compiling-qt-projects-on.html
+ *
+ * http://norvig.com/ngrams/ch14.pdf
+ * https://en.wikipedia.org/wiki/Simulated_annealing
+ * https://amitksaha.wordpress.com/2010/03/14/hill-climbing-a-simple-optimization-method/
+ * https://www.quora.com/How-can-the-hill-climbing-algorithm-be-implemented-in-a-programming-language
+ *
+ * QWT DOCU:
+ * http://qwt.sourceforge.net/class_qwt_scale_engine.html
+ */
 
 int main(int argc, char **argv)
 {
