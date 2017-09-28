@@ -15,7 +15,9 @@ int main(int argc, char **argv)
 
     QwtPlot plot;
     QwtPlotCurve *curve = new QwtPlotCurve();
-    curve->setRawData(x, y, 101);
+
+	// insert data
+    curve->setRawData(x, y, VALUE_COUNT);
     curve->attach(&plot);
     plot.show();
 	
