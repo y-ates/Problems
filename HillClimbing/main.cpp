@@ -25,12 +25,17 @@
  * http://qwt.sourceforge.net/class_qwt_scale_engine.html
  */
 
+int hillClimbing(int *hills) {
+
+    return 0;
+}
+
 int generateRandomNumber(int min, int max) {
-	std::mt19937 rng;
+    std::mt19937 rng;
     rng.seed(std::random_device()());
     std::uniform_int_distribution<std::mt19937::result_type> dist6(min, max);
 
-	return dist6(rng);
+    return dist6(rng);
 }
 
 int main(int argc, char **argv)
@@ -39,7 +44,7 @@ int main(int argc, char **argv)
     double x[VALUE_COUNT];
     double y[VALUE_COUNT];
 
-    for (int i = 0; i < VALUE_COUNT; ++i) {
+    for (int i=0; i < VALUE_COUNT; ++i) {
         x[i] =  i / 10.0;
         y[i] = sin(x[i]);
     }
@@ -47,19 +52,19 @@ int main(int argc, char **argv)
     QwtPlot plot;
     QwtPlotCurve *curve = new QwtPlotCurve();
 
-	// insert data
+    // insert data
     curve->setRawData(x, y, VALUE_COUNT);
     curve->attach(&plot);
-	
-	// configure plot
-	plot.setAxisTitle(QwtPlot::yLeft, FUNC_STRING);
-	plot.setAxisTitle(QwtPlot::xBottom, "x");
-	plot.setTitle(PLOT_TITLE);
-	plot.axisScaleEngine(QwtPlot::xBottom)->setAttribute(QwtScaleEngine::Floating,true);
-	plot.setAxisScale(QwtPlot::xBottom, 0, VALUE_COUNT/10, 1);
-	plot.resize(200, 200);
 
-	// show plot
+    // configure plot
+    plot.setAxisTitle(QwtPlot::yLeft, FUNC_STRING);
+    plot.setAxisTitle(QwtPlot::xBottom, "x");
+    plot.setTitle(PLOT_TITLE);
+    plot.axisScaleEngine(QwtPlot::xBottom)->setAttribute(QwtScaleEngine::Floating, true);
+    plot.setAxisScale(QwtPlot::xBottom, 0, VALUE_COUNT/10, 1);
+    plot.resize(200, 200);
+
+    // show plot
     plot.show();
 
     return a.exec();
