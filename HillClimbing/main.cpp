@@ -2,6 +2,7 @@
 #include <qwt_scale_engine.h>
 #include <qwt_plot.h>
 #include <qapplication.h>
+#include <random>
 
 
 #define PLOT_TITLE "Hill Climbing Algorithm"
@@ -23,6 +24,14 @@
  * QWT DOCU:
  * http://qwt.sourceforge.net/class_qwt_scale_engine.html
  */
+
+int generateRandomNumber(int min, int max) {
+	std::mt19937 rng;
+    rng.seed(std::random_device()());
+    std::uniform_int_distribution<std::mt19937::result_type> dist6(min, max);
+
+	return dist6(rng);
+}
 
 int main(int argc, char **argv)
 {
